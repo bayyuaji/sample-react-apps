@@ -20,7 +20,7 @@ deploy:
   access_key_id: $AWS_ACCESS_KEY
   secret_access_key: $AWS_SECRET_KEY
   bucket: sepulsacodedeploy
-  key: latest.zip
+  key: react-v1.zip
   bundle_type: zip
   application: SampleReactApps
   deployment_group: ReactJS
@@ -29,6 +29,6 @@ deploy:
 
 script:
   - yarn build
-  - zip -r latest *
+  - zip -r react-v1 *
   - mkdir -p dpl_cd_upload
-  - mv latest.zip dpl_cd_upload/latest.zip
+  - mv react-v1.zip dpl_cd_upload/react-v1.zip
